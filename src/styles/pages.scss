@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 50px;
+    @media (max-width: $breakpoint-small) {
+        gap: 22px;
+        margin-top: 0;
+    }
+}
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+    margin-top: 38px;
+}
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 60px 0;
+    h1 {
+        display: flex;
+        align-items: center;
+        font-size: 288px;
+        margin: 0;
+        height: 263px;
+        color: $main-color;
+        @include text-outline;
+    }
+    p {
+        font-size: 36px;
+        margin: 0;
+        color: $main-color;
+        font-weight: 500;
+        @include text-outline;
+    }
+    a {
+        font-size: 18px;
+        color: inherit;
+    }
+}

@@ -1,4 +1,4 @@
-import '@/styles/Home.scss'
+import '@/styles/pages.scss'
 import Banner from '@/components/ui/Banner'
 import homeBanner from '@/assets/img/banners/home-banner.png'
 import Gallery from '@/components/ui/Gallery'

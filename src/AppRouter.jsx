@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout.jsx'
 import Home from './pages/Home'
 import About from './pages/About'
+import Error from './pages/Error'
 
 function AppRouter() {
   return (
@@ -10,6 +11,7 @@ function AppRouter() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/a-propos" element={<About />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </Layout>
     </Router>
