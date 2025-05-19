@@ -5,11 +5,13 @@ import Footer from './Footer.jsx'
 
 function Layout({ children }) {
   return (
-    <div className="app-container">
-      <Header />
-      <Main>{children}</Main>
+    <>
+      <div className="app-container">
+        <Header />
+        <Main>{children}</Main>
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

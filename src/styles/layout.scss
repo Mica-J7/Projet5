@@ -1,11 +1,17 @@
+@use 'variables' as *;
+
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
 .app-container {
     display: flex;
     flex-direction: column;
     max-width: 1440px;
-    padding: 45px 100px 0 100px;
+    padding: 3.1vw 7vw 0 7vw;
     margin: auto;
     gap: 50px;
-    font-family: 'Montserrat';
     box-sizing: border-box;
     header {
         display: flex;
@@ -20,24 +26,54 @@
                 color: inherit;
                 text-decoration: none;
             }
+            @media (max-width: $breakpoint-medium) {
+                font-size: 18px;
+            }
+            @media (max-width: $breakpoint-small) {
+                font-size: 12px;
+                text-transform: uppercase;
+                gap: 26px;
+                margin-left: 10px;
+            }
+        }
+        img {
+            @media (max-width: $breakpoint-medium) {
+                width: 145px;
+                height: 47px;
+            }
         }
     }
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        font-size: 24px;
-        font-weight: 500;
-        color: white;
-        background-color: black;
-        height: 209px;
-        img {
-            margin-top: 66px;
-        }
+    @media (max-width: $breakpoint-small) {
+        gap: 27px;
+        padding: 20px;
     }
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    background-color: black;
+    height: 209px;
+    img {
+        margin-top: 66px;
+    }
+    p {
+        @media (max-width: $breakpoint-small) {
+            width: 133px;
+            text-align: center;
+        }
+    }
+    @media (max-width: $breakpoint-small) {
+                font-size: 12px;
+                margin-top: 27px;
+            }
+}
 
 
 

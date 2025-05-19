@@ -9,7 +9,12 @@ function Home() {
       <Banner
         image={homeBanner}
         altimg="Photo de falaises en bord de mer"
-        title="Chez vous, partout et ailleurs"
+        title={
+          <>
+            Chez vous, <br className="banner__mobile-break" />
+            partout et ailleurs
+          </>
+        }
       />
       <Gallery />
     </div>
