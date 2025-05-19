@@ -1,4 +1,4 @@
-import '@/styles/ui.css'
+import '@/styles/ui.scss'
 
 function Banner({ image, altimg, title }) {
   return (

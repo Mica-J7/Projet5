@@ -1,6 +1,6 @@
 import AccomodationList from '@/data/AccomodationList.js'
 import Card from './Card'
-import '@/styles/ui.css'
+import '@/styles/ui.scss'
 
 function Gallery() {
   return (

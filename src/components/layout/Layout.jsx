@@ -1,4 +1,4 @@
-import '@/styles/layout.css'
+import '@/styles/layout.scss'
 import Header from './Header.jsx'
 import Main from './Main.jsx'
 import Footer from './Footer.jsx'
