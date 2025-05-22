@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import '@/styles/ui.scss'
+import arrow from '@/assets/img/icons/arrow.png'
 
-function Collapse({ title, icon, children }) {
+function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleCollapse = () => {
@@ -14,7 +15,7 @@ function Collapse({ title, icon, children }) {
         <h2>{title}</h2>
         <button onClick={toggleCollapse}>
           <img
-            src={icon}
+            src={arrow}
             alt="Icône du menu déroulant"
             className={`arrow-icon ${isOpen ? 'rotated' : ''}`}
           />
