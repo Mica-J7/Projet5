@@ -1,6 +1,6 @@
 import '@/styles/pages.scss'
 import Banner from '@/components/ui/Banner'
-import homeBanner from '@/assets/img/banners/home-banner.png'
+import homeBanner from '@/assets/img/banners/home-banner.webp'
 import Gallery from '@/components/ui/Gallery'
 
 function Home() {

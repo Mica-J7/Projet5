@@ -47,6 +47,9 @@
             display: inline;
         }
     }
+    @media (min-width: $breakpoint-large) {
+        max-height: 223px;
+    }
     @media (max-width: $breakpoint-small) {
         height: 30vw;
         border-radius: 10px;
@@ -56,11 +59,15 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
-    gap: 3.5vw 4.5%;
-    padding: 3.7vw 4.5%;
-    background-color: #F6F6F6;
+    gap: 2.7vw 4.5%;
+    padding: 3vw 4.5%;
+    background-color: $back-color;
     border-radius: 25px;
     box-sizing: border-box;
+    @media (min-width: $breakpoint-large) {
+        padding: 40px;
+        gap: 40px
+    }
     @media (max-width: $breakpoint-medium) {
         grid-template-columns: repeat(2, minmax(200px, 1fr));
     }
@@ -69,6 +76,7 @@
         padding: 0;
         gap: 22px;
         background-color: white;
+        place-items: center;
     }
 }
 
@@ -80,59 +88,102 @@
     width: 100%;
     @include elem-shadow;
     border-radius: 10px;
-    img {
-        object-fit: cover;
-        height: 100%;
-        border-radius: 10px;
-    }
-    &__title  {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+    &__link {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 1vw 1vw;
-        font-size: clamp(0.5rem, 1.2vw, 1rem);
-        font-weight: 700;
-        color: white;
-        @include text-outline;
-        background: $main-color;
-        width: 100%;
-        height: 18%;
-        border-radius: 0 0 10px 10px;
-        box-sizing: border-box;
-        @media (max-width: $breakpoint-medium) {
-            font-size: clamp(0.5rem, 2.3vw, 1.5rem);
+        flex-direction: column;
+        aspect-ratio: 1 / 1;
+        img {
+            object-fit: cover;
+            height: 100%;
+            border-radius: 10px;
+            @media (max-width: $breakpoint-small) {
+                width: 100%;
+                height: 255px;
+            }
         }
-        @media (max-width: $breakpoint-small) {
-            font-size: clamp(0.5rem, 4vw, 1.5rem);
+        &--title  {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 1vw 1vw;
+            font-size: clamp(0.5rem, 1.2vw, 1rem);
+            font-weight: 700;
+            color: white;
+            @include text-outline;
+            background: $main-color;
+            width: 100%;
+            height: 18%;
+            border-radius: 0 0 10px 10px;
+            box-sizing: border-box;
+            @media (max-width: $breakpoint-medium) {
+                font-size: clamp(0.5rem, 2.3vw, 1.5rem);
+            }
+            @media (max-width: $breakpoint-small) {
+                font-size: clamp(0.5rem, 4vw, 1.5rem);
+            }
         }
     }
     @media (max-width: $breakpoint-small) {
-            aspect-ratio: 1.3 / 1;
-        }
+            width: 100%;
+            height: 255px;
+            
+    }
 }
 
-.collapse {
+.collapse-section {
     display: flex;
     flex-direction: column;
     gap: 30px;
     width: 84%;
-    &__btn {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 54px;
-        margin: 0;
-        padding: 10px 20px 10px 15px;
-        border-radius: 5px;
-        font-size: 16px;
-        color: white;
-        background-color: $main-color;
-        @include text-outline;
-        @include elem-shadow;
-        border: none;
+    .collapse {
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px 10px 15px;
+            border-radius: 5px;
+            color: white;
+            background-color: $main-color;
+            @include text-outline;
+            @include elem-shadow;
+            box-sizing: border-box;
+            h2 {
+            font-size: 24px;
+            margin: 0;
+            }
+            button {
+                background-color: $main-color;
+                border: none;
+                cursor: pointer;
+                .arrow-icon {
+                    transition: transform 0.5s ease-in-out;
+                }
+                .arrow-icon.rotated {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        &__content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            background-color: $back-color;
+            border-radius: 5px;
+            padding: 0 1rem;
+            @include elem-shadow;
+            p {
+                line-height: 1.5;
+                font-size: 18px;
+                margin: 5px;
+            }
+            &.open {
+                max-height: 500px;
+                padding: 1rem;
+            }
+        }
     }
 }
