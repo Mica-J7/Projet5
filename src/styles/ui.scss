@@ -134,56 +134,51 @@
     }
 }
 
-.collapse-section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 84%;
-    .collapse {
-        &__header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px 10px 15px;
-            border-radius: 5px;
-            color: white;
+.collapse {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 52px;
+        padding: 10px 20px 10px 15px;
+        border-radius: 5px;
+        color: white;
+        background-color: $main-color;
+        @include text-outline;
+        @include elem-shadow;
+        box-sizing: border-box;
+        h2 {
+        font-size: 20px;
+        margin: 0;
+        }
+        button {
             background-color: $main-color;
-            @include text-outline;
-            @include elem-shadow;
-            box-sizing: border-box;
-            h2 {
-            font-size: 24px;
-            margin: 0;
+            border: none;
+            cursor: pointer;
+            .arrow-icon {
+                transition: transform 0.5s ease-in-out;
             }
-            button {
-                background-color: $main-color;
-                border: none;
-                cursor: pointer;
-                .arrow-icon {
-                    transition: transform 0.5s ease-in-out;
-                }
-                .arrow-icon.rotated {
-                    transform: rotate(180deg);
-                }
+            .arrow-icon.rotated {
+                transform: rotate(180deg);
             }
         }
-        &__content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-            background-color: $back-color;
-            border-radius: 5px;
-            padding: 0 1rem;
-            @include elem-shadow;
-            p {
-                line-height: 1.5;
-                font-size: 18px;
-                margin: 5px;
-            }
-            &.open {
-                max-height: 500px;
-                padding: 1rem;
-            }
+    }
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        background-color: $back-color;
+        border-radius: 5px;
+        padding: 0 1rem;
+        @include elem-shadow;
+        p {
+            line-height: 1.5;
+            font-size: 18px;
+            margin: 5px;
+        }
+        &.open {
+            max-height: 500px;
+            padding: 1rem;
         }
     }
 }
@@ -202,16 +197,23 @@
     button {
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
     &__arrow {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         &.left {
-            left: 10px;
+            left: 15px;
         }
         &.right {
-            right: 10px;
+            right: 15px;
         }
+    }
+}
+
+.rating {
+    img {
+        margin: 5px;
     }
 }

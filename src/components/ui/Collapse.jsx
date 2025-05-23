@@ -4,7 +4,6 @@ import arrow from '@/assets/img/icons/arrow.png'
 
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false)
-
   const toggleCollapse = () => {
     setIsOpen(!isOpen)
   }

@@ -7,7 +7,7 @@ function About() {
   return (
     <div className="about-page">
       <Banner image={aboutBanner} altimg="Photo de montagnes eneigées" />
-      <div className="collapse-section">
+      <div className="about-page__collapse">
         <Collapse title="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
