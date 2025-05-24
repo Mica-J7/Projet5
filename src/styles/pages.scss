@@ -55,6 +55,10 @@
                 height: 64px;
                 border-radius: 50%;
             }
+            p {
+                width: 93px;
+                text-align: right;
+            }
         }
     }
     &__content {
@@ -78,6 +82,7 @@
     &__collapses {
         display: flex;
         gap: 76px;
+        margin-top: 5px;
         box-sizing: border-box;
         &--desc {
             width: 50%;

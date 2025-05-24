@@ -15,17 +15,24 @@ function Carousel({ images, altimg }) {
 
   return (
     <div className="carousel">
-      <button onClick={prevSlide} className="carousel__arrow left">
-        <img src={leftArrow} />
-      </button>
       <img
         src={images[currentIndex]}
         alt={altimg}
         className="carousel__image"
       />
-      <button onClick={nextSlide} className="carousel__arrow right">
-        <img src={rightArrow} />
-      </button>
+      {images.length > 1 && (
+        <>
+          <button onClick={prevSlide} className="carousel__arrow left">
+            <img src={leftArrow} />
+          </button>
+          <button onClick={nextSlide} className="carousel__arrow right">
+            <img src={rightArrow} />
+          </button>
+          <p className="carousel__index">
+            {currentIndex + 1} / {images.length}
+          </p>
+        </>
+      )}
     </div>
   )
 }

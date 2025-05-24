@@ -159,7 +159,7 @@
                 transition: transform 0.5s ease-in-out;
             }
             .arrow-icon.rotated {
-                transform: rotate(180deg);
+                transform: rotate(-180deg);
             }
         }
     }
@@ -209,6 +209,16 @@
         &.right {
             right: 15px;
         }
+    }
+    &__index {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        @include text-outline;
     }
 }
 
