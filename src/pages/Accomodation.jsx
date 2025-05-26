@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import AccomodationList from '@/data/AccomodationList.js'
 import Carousel from '@/components/ui/Carousel'
-import Rating from '../../components/ui/Rating'
+import Rating from '../components/ui/Rating'
 import Collapse from '@/components/ui/Collapse'
 import '@/styles/pages.scss'
 
