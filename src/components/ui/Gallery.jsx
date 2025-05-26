@@ -1,4 +1,4 @@
-import AccomodationList from '@/data/AccomodationList.js'
+import AccomodationList from '@/data/accomodationList.js'
 import Card from './Card'
 import '@/styles/ui.scss'
 
