@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import AccomodationList from '@/data/accomodationList.js'
-import Carousel from '@/components/ui/Carousel'
-import Rating from '@/components/ui/Rating'
-import Collapse from '@/components/ui/Collapse'
-import '@/styles/pages.scss'
+import Carousel from '@/components/ui/Carousel/Carousel.jsx'
+import Rating from '@/components/ui/Rating/Rating.jsx'
+import Collapse from '@/components/ui/Collapse/Collapse.jsx'
+import '@/pages/Accomodation/accomodation.scss'
 
 function Accomodation() {
   const { id } = useParams()

@@ -1,4 +1,4 @@
-import '@/styles/layout.scss'
+import './main.scss'
 
 function Main({ children }) {
   return <main>{children}</main>

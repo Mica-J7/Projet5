@@ -1,0 +1,19 @@
+@use '@/variables' as *;
+
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    padding: 3vw 7.5vw 0 7.5vw;
+    margin: auto;
+    box-sizing: border-box;
+    @media (max-width: $breakpoint-small) {
+        gap: 19px;
+        padding: 20px;
+    }
+}

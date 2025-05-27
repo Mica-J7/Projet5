@@ -1,0 +1,57 @@
+@use '@/variables' as *;
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15vw;
+    border-radius: 25px;
+    overflow: hidden;
+    @include elem-shadow;
+    img {
+        opacity: black 60%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-size: clamp(1rem, 4vw, 3rem);
+        font-weight: 700;
+        white-space: nowrap;
+        color: white;
+        @include text-outline;
+        z-index: 1;
+        @media (max-width: $breakpoint-small) {
+            font-size: clamp(1rem, 6vw, 6rem);
+            white-space: normal;
+            left: 35%;
+        }
+    }
+    &__mobile-break {
+        display: none;
+        @media (max-width: $breakpoint-small) {
+            display: inline;
+        }
+    }
+    @media (min-width: $breakpoint-large) {
+        max-height: 223px;
+    }
+    @media (max-width: $breakpoint-small) {
+        height: 30vw;
+        border-radius: 10px;
+    }
+}

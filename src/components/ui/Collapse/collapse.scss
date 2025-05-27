@@ -1,0 +1,72 @@
+@use '@/variables' as *;
+
+.collapse {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 52px;
+        padding: 10px 20px 10px 15px;
+        border-radius: 5px;
+        color: white;
+        background-color: $main-color;
+        @include text-outline;
+        @include elem-shadow;
+        box-sizing: border-box;
+        h2 {
+            font-size: 20px;
+            margin: 0;
+            @media (max-width: $breakpoint-small) {
+                font-size: 12px;
+            }
+        }
+        button {
+            background-color: $main-color;
+            border: none;
+            cursor: pointer;
+            .arrow-icon {
+                transition: transform 0.5s ease-in-out;
+                @media (max-width: $breakpoint-small) {
+                    height: 20px;
+                }
+            }
+            .arrow-icon.rotated {
+                transform: rotate(-180deg);
+            }
+        }
+        @media (max-width: $breakpoint-small) {
+            height: 30px;
+            font-size: 12px;
+            padding: 0 5px 0 10px;
+        }
+    }
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        background-color: $back-color;
+        border-radius: 5px;
+        padding: 0 1rem;
+        @include elem-shadow;
+        p {
+            line-height: 1.5;
+            font-size: 18px;
+            margin: 5px;
+            @media (max-width: $breakpoint-small) {
+                font-size: 12px;
+            }
+        }
+        &.open {
+            max-height: 500px;
+            padding: 1rem;
+            @media (max-width: $breakpoint-small) {
+                padding: 0.5rem;
+                max-height: 1000px;
+            }
+        }
+        @media (max-width: $breakpoint-small) {
+            padding: 0 0.5rem;
+            transition: max-height 0.7s ease-in-out, padding 0.7s ease-in-out;
+        }
+    }
+}

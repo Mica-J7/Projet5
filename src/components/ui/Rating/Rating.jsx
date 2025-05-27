@@ -1,6 +1,6 @@
 import starFull from '@/assets/img/icons/star-full.png'
 import starEmpty from '@/assets/img/icons/star-empty.png'
-import '@/styles/ui.scss'
+import '@/components/ui/Rating/rating.scss'
 
 function Rating({ rating, total = 5 }) {
   const full = parseInt(rating)

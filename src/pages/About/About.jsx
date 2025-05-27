@@ -1,7 +1,7 @@
-import '@/styles/pages.scss'
-import Banner from '@/components/ui/Banner'
+import '@/pages/About/about.scss'
+import Banner from '@/components/ui/Banner/Banner.jsx'
 import aboutBanner from '@/assets/img/banners/about-banner.webp'
-import Collapse from '@/components/ui/Collapse'
+import Collapse from '@/components/ui/Collapse/Collapse.jsx'
 
 function About() {
   return (

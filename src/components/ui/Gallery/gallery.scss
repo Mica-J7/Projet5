@@ -1,0 +1,25 @@
+@use '@/variables' as *;
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 2.7vw 4.5%;
+    padding: 3vw 4.5%;
+    background-color: $back-color;
+    border-radius: 25px;
+    box-sizing: border-box;
+    @media (min-width: $breakpoint-large) {
+        padding: 40px;
+        gap: 40px
+    }
+    @media (max-width: $breakpoint-medium) {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    @media (max-width: $breakpoint-small) {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        padding: 0;
+        gap: 22px;
+        background-color: white;
+        place-items: center;
+    }
+}

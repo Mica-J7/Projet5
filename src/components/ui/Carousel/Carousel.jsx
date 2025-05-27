@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '@/styles/ui.scss'
+import './carousel.scss'
 import leftArrow from '@/assets/img/icons/left-arrow.png'
 import rightArrow from '@/assets/img/icons/right-arrow.png'
 

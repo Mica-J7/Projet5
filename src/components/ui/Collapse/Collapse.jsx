@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '@/styles/ui.scss'
+import '@/components/ui/Collapse/collapse.scss'
 import arrow from '@/assets/img/icons/arrow.png'
 
 function Collapse({ title, children }) {

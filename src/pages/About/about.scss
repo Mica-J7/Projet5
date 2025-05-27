@@ -1,0 +1,23 @@
+@use '@/variables' as *;
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+    margin-top: 38px;
+    &__collapse {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 84%;
+        @media (max-width: $breakpoint-small) {
+            gap: 19px;
+            width: 100%;
+        }
+    }
+    @media (max-width: $breakpoint-small) {
+        margin: 0;
+        gap: 19px;
+    }
+}

@@ -1,7 +1,7 @@
-import '@/styles/pages.scss'
-import Banner from '@/components/ui/Banner'
+import '@/pages/Home/home.scss'
+import Banner from '@/components/ui/Banner/Banner.jsx'
 import homeBanner from '@/assets/img/banners/home-banner.webp'
-import Gallery from '@/components/ui/Gallery'
+import Gallery from '@/components/ui/Gallery/Gallery.jsx'
 
 function Home() {
   return (

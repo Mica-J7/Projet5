@@ -1,0 +1,14 @@
+@use '@/variables' as *;
+
+.rating {
+    display: flex;
+    gap: 10px;
+    img {
+        @media (max-width: $breakpoint-medium) {
+            height: 18px;
+        }
+    }
+    @media (max-width: $breakpoint-medium) {
+        gap: 5px;
+    }
+}

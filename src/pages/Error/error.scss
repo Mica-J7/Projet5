@@ -1,0 +1,50 @@
+@use '@/variables' as *;
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    padding: 60px 0;
+    h1 {
+        display: flex;
+        align-items: center;
+        font-size: 288px;
+        margin: 0;
+        color: $main-color;
+        @include text-outline;
+        @media (max-width: $breakpoint-medium) {
+            font-size: 150px;
+        }
+        @media (max-width: $breakpoint-small) {
+            font-size: 100px;
+            margin: 50px;
+        }
+    }
+    p {
+        font-size: 36px;
+        margin: 0;
+        color: $main-color;
+        font-weight: 500;
+        @media (max-width: $breakpoint-medium) {
+            font-size: 25px;
+            text-align: center;
+        }
+        @media (max-width: $breakpoint-small) {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    a {
+        font-size: 18px;
+        color: inherit;
+        @media (max-width: $breakpoint-small) {
+            font-size: 14px;
+            margin: 50px 0 100px 0;
+        }
+    }
+    @media (max-width: $breakpoint-small) {
+            padding: 0;
+            gap: 50px;
+        }
+}
