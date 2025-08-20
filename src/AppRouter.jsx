@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Layout from '@/components/Layout/Layout.jsx'
 import Home from '@/pages/Home/Home.jsx'
 import About from '@/pages/About/About.jsx'
@@ -7,7 +7,7 @@ import Error from '@/pages/Error/Error.jsx'
 
 function AppRouter() {
   return (
-    <Router>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ function AppRouter() {
           <Route path="*" element={<Error />} />
         </Routes>
       </Layout>
-    </Router>
+    </HashRouter>
   )
 }
 
